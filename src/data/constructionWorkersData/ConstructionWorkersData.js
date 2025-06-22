@@ -15,7 +15,7 @@ const ConstructionWorkersData = [
     experienceYears: 7,
     description: "Certified electrician specializing in residential and commercial wiring, lighting installation, and safety inspections.",
     tools: ["Wire Strippers", "Multimeter", "Screwdriver", "Voltage Tester"],
-    photo: "https://randomuser.me/api/portraits/women/65.jpg"
+    photo: ""
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const ConstructionWorkersData = [
     experienceYears: 8,
     description: "Experienced plumber handling pipe installations, leak repairs, and bathroom/kitchen fittings.",
     tools: ["Pipe Wrench", "Plunger", "Tape Measure", "Pipe Cutter"],
-    photo: "https://randomuser.me/api/portraits/men/32.jpg"
+    photo: ""
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const ConstructionWorkersData = [
     experienceYears: 12,
     description: "Skilled mason with expertise in bricklaying, concrete work, and stone masonry.",
     tools: ["Trowel", "Level", "Brick Hammer", "Concrete Mixer"],
-    photo: "https://randomuser.me/api/portraits/women/48.jpg"
+    photo: ""
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const ConstructionWorkersData = [
     experienceYears: 9,
     description: "Professional roofer specializing in installing and repairing various roofing materials including shingles, tiles, and metal roofs.",
     tools: ["Roofing Hammer", "Ladder", "Utility Knife", "Nail Gun"],
-    photo: "https://randomuser.me/api/portraits/men/56.jpg"
+    photo: ""
   }
 ];
 
