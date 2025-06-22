@@ -6,7 +6,7 @@ const ConstructionWorkersData = [
     experienceYears: 10,
     description: "Expert in wood framing, cabinetry, and finishing work. Skilled with power tools and hand tools.",
     tools: ["Hammer", "Saw", "Drill", "Measuring Tape"],
-    photo: "https://randomuser.me/api/portraits/men/45.jpg"
+    photo: ""
   },
   {
     id: 2,
