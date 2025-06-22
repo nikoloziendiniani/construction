@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sliderContainer {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 70vh;
+    min-height: 500px;
+}
+
+.sliderContainer .sliderWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Arrow buttons */
+.sliderContainer .sliderWrapper .nextBtn,
+.sliderContainer .sliderWrapper .prevBtn {
+    position: absolute;
+    border: none;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    padding: 13px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%), ;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sliderContainer .sliderWrapper .prevBtn {
+    left: 30px;
+    animation: left 0.5s ease-in;
+    transform: translateX(-50%);
+}
+
+@keyframes left {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+
+    to {
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+.sliderContainer .sliderWrapper .nextBtn {
+    right: 30px;
+    animation: right 0.5s ease-in;
+    transform: translateX(50%);
+}
+
+@keyframes right {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+
+.sliderContainer .sliderWrapper .nextBtn:hover,
+.sliderContainer .sliderWrapper .prevBtn:hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: #111;
+}
+
+.sliderContainer .sliderWrapper .nextBtn:active,
+.sliderContainer .sliderWrapper .prevBtn:active {
+    border: 1px solid white;
+}
+
+/* Card slider */
+.sliderContainer .sliderWrapper .sliderTracker {
+    width: 100%;
+    height: 100%;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 70px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    transition: background-image 0.5s ease-in-out;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container {
+    background-color: rgba(0, 0, 0, 0.512);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    padding: 50px 30px;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container .prices {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container .prices .price {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container .btn {
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(114, 114, 114, 0.684);
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.sliderContainer .sliderWrapper .sliderTracker .card .container .btn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 8px white;
+}
+
+
+@media (max-width: 768px) {
+
+    .sliderContainer .sliderWrapper .sliderTracker .card .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .sliderContainer .sliderWrapper .sliderTracker .card .container p,
+    .sliderContainer .sliderWrapper .sliderTracker .card .container .price {
+        font-size: 0.95rem;
+    }
+
+    .sliderContainer .sliderWrapper .nextBtn,
+    .sliderContainer .sliderWrapper .prevBtn {
+        padding: 10px;
+    }
+}
+.sliderContainer .sliderWrapper .pagination{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.sliderContainer .sliderWrapper .pagination .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
