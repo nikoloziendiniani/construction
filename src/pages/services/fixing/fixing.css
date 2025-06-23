@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap'); */
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --green: #84ae92;
+  --darkBlue: #254d70;
+  --orange: #fb9e3a;
+  --mainText: "Roboto";
+  --secondaryText: "Matangi"
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .fixingContainer {
   max-width: 900px;
   margin: 50px auto;
@@ -12,7 +22,7 @@
   font-family: var(--mainText);
   background-color: #f9f9f9;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #333;
 }
 
@@ -43,7 +53,8 @@
 }
 
 .fixingSection ul {
-  list-style: disc inside;
+  list-style: inside;
+  /* dot or so caled bullet is part of content wich means if text wraps it wil wrap under the dot */
   font-size: 1.1rem;
   color: #555;
   padding-left: 15px;

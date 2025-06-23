@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap'); */
+
+:root {
+  --green: #84ae92;
+  --darkBlue: #254d70;
+  --orange: #fb9e3a;
+  --mainText: "Roboto";
+  --secondaryText: "Matangi"
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    height: fit-content;
+    position: relative;
+}
+
+.sliderContainer .nextBtn,
+.sliderContainer .prevBtn {
+    position: absolute;
+    border: none;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    padding: 13px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%), ;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.sliderContainer .prevBtn {
+    left: 30px;
+    animation: left 0.5s ease-in;
+    transform: translateX(-50%);
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+.sliderContainer .nextBtn {
+    right: 30px;
+    animation: right 0.5s ease-in;
+    transform: translateX(50%);
+}
+
+@keyframes right {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+.sliderContainer .sliderTrack{
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.sliderContainer .sliderTrack .card{
+    min-width: 100px;
+    padding: 10px 24px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 5px;
+    flex-basis: 300px;
+}
+.sliderContainer .sliderTrack .card .title{
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: var(--mainText);
+}
+.sliderContainer .sliderTrack .card .image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.sliderContainer .sliderTrack .card .specialty{
+    font-family: var(--secondaryText);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.sliderContainer .sliderTrack .card .text{
+    text-align: justify;
+}
+.sliderContainer .sliderTrack .card .experience{
+    font-size: 1.1rem;
+    font-family: var(--mainText);
+    font-weight: 600;
+    text-align: right;
+}
+
+.sliderContainer .sliderTrack .card .number{
+    text-align: center;
+}
+.sliderContainer .sliderTrack .card .number a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
