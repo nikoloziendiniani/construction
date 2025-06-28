@@ -127,6 +127,12 @@
     flex-basis: 45%;
 }
 
+.searchContainer .searches .soldSearch {
+    justify-self: center;
+    margin: auto;
+    flex-basis: 45%;
+}
+
 .searchContainer .btn {
     padding: 20px 50px;
     background-color: #007BFF;

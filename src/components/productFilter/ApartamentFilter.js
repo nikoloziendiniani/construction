@@ -24,6 +24,8 @@ const ApartamentFilter = () => {
     const [minApartamentPrice, setMinApartamentPrice] = useState("");
     const [maxApartamentPrice, setMaxApartamentPrice] = useState("");
 
+    const [sold, setSold] = useState("everything")
+
     const filteredApartaments = () => {
         let result = ApartmentsData;
 
@@ -47,6 +49,9 @@ const ApartamentFilter = () => {
             result = result.filter(apartament =>
                 rooms === "4+" ? apartament.rooms >= 4 : apartament.rooms === Number(rooms)
             );
+        }
+        if (sold !== "everything"){
+            result = result.filter(apartament => sold === "sold" ? apartament.sold : !apartament.sold)
         }
 
         setFiltered(result);
@@ -78,7 +83,7 @@ const ApartamentFilter = () => {
                     <select value={rooms} className="search roomSearch"
                         onChange={(e) => { setRooms(e.target.value) }}  >
                         <option >
-                            everything
+                            every room
                         </option>
                         <option>
                             1
@@ -117,6 +122,17 @@ const ApartamentFilter = () => {
                             placeholder="max-price"
                         />
                     </div>
+                    <select className="search soldSearch" onChange={(e) => setSold(e.target.value)}>
+                        <option>
+                            everything
+                        </option>
+                        <option>
+                            sold
+                        </option>
+                        <option>
+                            available
+                        </option>
+                    </select>
                 </div>
                 <button className="btn"
                     onClick={filteredApartaments}
