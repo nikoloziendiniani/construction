@@ -19,7 +19,7 @@ export const Apartment = () => {
         alt={apartment.name}
       />
       <div className="apartmentHeader">
-        <div className="apartmentTitle">{apartment.name}</div>
+        <div className="apartmentTitle">{apartment.name} <span>{apartment.sold ? "sold" : "available"} </span></div>
         <div className="apartmentPrice">
           ${apartment.price.perMonth.toFixed(2)} / month
         </div>
@@ -30,7 +30,7 @@ export const Apartment = () => {
         <span>📐 Area: {apartment.area} m²</span>
       </div>
       <div className="apartmentDescription">{apartment.description}</div>
-      <button className="apartmentBtn">buy now</button>
+      <button className="apartmentBtn" onClick={() => { apartment.sold ? alert("is sold") :  alert("is not sold") }}>buy now</button>
     </div>
   );
 };

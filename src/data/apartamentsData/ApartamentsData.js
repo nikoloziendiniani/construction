@@ -15,7 +15,8 @@ const ApartmentsData = [
         },
         city: "batumi",
         rooms: 2,
-        area: 85 // in square meters
+        area: 85, // in square meters
+        sold: true,
     },
     {
         id: 2,
@@ -28,7 +29,8 @@ const ApartmentsData = [
         },
         city: "batumi",
         rooms: 1,
-        area: 60
+        area: 60,
+        sold: false
     },
     {
         id: 3,
@@ -41,7 +43,9 @@ const ApartmentsData = [
         },
         city: "batumi",
         rooms: 2,
-        area: 70
+        area: 70,
+        sold: false
+
     },
     {
         id: 4,
@@ -54,7 +58,9 @@ const ApartmentsData = [
         },
         city: "tbilisi",
         rooms: 4,
-        area: 120
+        area: 120,
+        sold: false
+
     }
 ];
 
