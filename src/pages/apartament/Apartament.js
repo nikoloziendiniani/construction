@@ -11,6 +11,8 @@ export const Apartment = () => {
   const [newOpinion, setNewOpinion] = useState("");
   const [newRating, setNewRating] = useState(5);
 
+  const [isSold, setIsSold] = useState(apartment.sold);
+
   if (!apartment) {
     return <div className="apartmentContainer">Apartment not found.</div>;
   }
@@ -41,7 +43,7 @@ export const Apartment = () => {
       <div className="apartmentHeader">
         <div className="apartmentTitle">
           {apartment.name}
-          <span>{apartment.sold ? "Sold" : "Available"}</span>
+          <span>{isSold ? "Sold" : "Available"}</span>
         </div>
         <div className="apartmentPrice">
           ${apartment.price.perMonth.toFixed(2)} / month
@@ -55,11 +57,14 @@ export const Apartment = () => {
       <div className="apartmentDescription">{apartment.description}</div>
       <button
         className="apartmentBtn"
-        onClick={() =>
-          apartment.sold
-            ? alert("This apartment is sold.")
-            : alert("This apartment is available.")
-        }
+        onClick={() => {
+          if (apartment.sold) {
+            alert("This apartment is sold.");
+          } else {
+            alert("You successfully bought the apartment.");
+            setIsSold(true);
+          }
+        }}
       >
         Buy Now
       </button>
@@ -103,6 +108,6 @@ export const Apartment = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div >
   );
 };
